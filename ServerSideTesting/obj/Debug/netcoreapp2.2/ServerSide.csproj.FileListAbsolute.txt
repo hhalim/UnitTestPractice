@@ -1,0 +1,14 @@
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/bin/Debug/netcoreapp2.2/ServerSide.deps.json
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/bin/Debug/netcoreapp2.2/ServerSide.runtimeconfig.json
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/bin/Debug/netcoreapp2.2/ServerSide.runtimeconfig.dev.json
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/bin/Debug/netcoreapp2.2/ServerSide.dll
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/bin/Debug/netcoreapp2.2/ServerSide.pdb
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.csprojAssemblyReference.cache
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.csproj.CoreCompileInputs.cache
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.RazorAssemblyInfo.cache
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.RazorAssemblyInfo.cs
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.AssemblyInfoInputs.cache
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.AssemblyInfo.cs
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.RazorTargetAssemblyInfo.cache
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.dll
+/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/Debug/netcoreapp2.2/ServerSide.pdb
