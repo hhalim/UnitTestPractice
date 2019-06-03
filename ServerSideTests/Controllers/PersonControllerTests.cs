@@ -22,12 +22,15 @@ namespace Tests
         [Test]
         public void FindAllReturnsListofPerson()
         {
+            //Arrange
             List<Person> personList = new List<Person> { new Person { Id = 1 } };
             _personService.Setup(p => p.findAll()).Returns(personList);
 
+            //Act
             var controllerReturn = _personController.findAll().Result as ObjectResult;
             var returnedList = controllerReturn.Value as List<Person>;
 
+            //Assert
             Assert.AreEqual(200, controllerReturn.StatusCode.Value);
             Assert.AreEqual(1, returnedList.Count);
         }

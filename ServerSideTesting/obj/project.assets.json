@@ -12078,11 +12078,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/ServerSide.csproj",
+      "projectUniqueName": "/Users/davidcoyer/Documents/GitHub/UnitTestPractice/ServerSideTesting/ServerSide.csproj",
       "projectName": "ServerSide",
-      "projectPath": "/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/ServerSide.csproj",
+      "projectPath": "/Users/davidcoyer/Documents/GitHub/UnitTestPractice/ServerSideTesting/ServerSide.csproj",
       "packagesPath": "/Users/davidcoyer/.nuget/packages/",
-      "outputPath": "/Users/davidcoyer/Projects/ServerSideTesting/ServerSideTesting/obj/",
+      "outputPath": "/Users/davidcoyer/Documents/GitHub/UnitTestPractice/ServerSideTesting/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
