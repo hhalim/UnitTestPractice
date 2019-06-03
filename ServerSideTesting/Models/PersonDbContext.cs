@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ServerSide.Models
 {
+
     public class PersonDbContext : DbContext
     {
         public PersonDbContext(DbContextOptions<PersonDbContext> options) : base(options) { }
@@ -28,7 +29,5 @@ namespace ServerSide.Models
             this.People.Add(person1);
             this.People.Add(person2);
         }
-
-
     }
 }

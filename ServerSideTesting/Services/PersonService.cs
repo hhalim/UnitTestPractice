@@ -8,24 +8,29 @@ namespace ServerSide.Services
 {
     public interface IPersonService
     {
-        IEnumerable<Person> findAll();
+        IEnumerable<Person> FindAll();
+        Person Get(int id);
     }
 
-    public class PersonService : IPersonService
+    public class PersonRepository : IPersonService
     {
 
         private IPersonRepository _repository;
 
-        public PersonService(IPersonRepository _repository)
+        public PersonRepository(IPersonRepository _repository)
         {
             this._repository = _repository;
         }
 
 
-        public IEnumerable<Person> findAll()
+        public IEnumerable<Person> FindAll()
         {
-            return this._repository.findAll();
+            return this._repository.FindAll();
         }
 
+        public Person Get(int id)
+        {
+            return this._repository.Get(id);
+        }
     }
 }

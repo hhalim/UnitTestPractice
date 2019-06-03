@@ -20,17 +20,22 @@ namespace ServerSide.Controllers
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<List<Person>> findAll()
+        public ActionResult<List<Person>> FindAll()
         {
-            var people = _personService.findAll();
+            var people = _personService.FindAll();
             return Ok(people);
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Person> Get(int id)
         {
-            return "value";
+            var person = _personService.Get(id);
+
+            if (person == null)
+                return NotFound(person);
+            else
+                return Ok(person);
         }
 
         // POST api/values

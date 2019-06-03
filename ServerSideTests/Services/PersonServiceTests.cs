@@ -5,18 +5,20 @@ using ServerSide.Models;
 using ServerSide.Services;
 using NUnit.Framework;
 using Moq;
+using ServerSide.Repositories;
+using System.Linq;
 
 namespace Tests
 {
-    public class PersonControllerTests
+    public class PersonServiceTests
     {
-        private Mock<IPersonService> _personService = new Mock<IPersonService>();
-        private PersonController _personController;
+        private Mock<IPersonRepository> _personRepository = new Mock<IPersonRepository>();
+        private ServerSide.Services.PersonRepository _personService;
 
         [SetUp]
         public void Setup()
         {
-            _personController = new PersonController(_personService.Object);
+            _personService = new ServerSide.Services.PersonRepository(_personRepository.Object);
         }
 
         [Test]
@@ -24,14 +26,12 @@ namespace Tests
         {
             //Arrange
             List<Person> personList = new List<Person> { new Person { Id = 1 }, new Person { Id = 2 } };
-            _personService.Setup(p => p.FindAll()).Returns(personList);
+            _personRepository.Setup(p => p.FindAll()).Returns(personList);
 
             //Act
-            var controllerReturn = _personController.FindAll().Result as ObjectResult;
-            var returnedList = controllerReturn.Value as List<Person>;
+            var returnedList = _personService.FindAll().ToList();
 
             //Assert
-            Assert.AreEqual(200, controllerReturn.StatusCode.Value);
             Assert.AreEqual(2, returnedList.Count);
         }
 
@@ -41,14 +41,12 @@ namespace Tests
             //Arrange
             var personId = 1;
             Person person = new Person { Id = 1 };
-            _personService.Setup(p => p.Get(personId)).Returns(person);
+            _personRepository.Setup(p => p.Get(personId)).Returns(person);
 
             //Act
-            var controllerReturn = _personController.Get(personId).Result as ObjectResult;
-            var returnedObject = controllerReturn.Value as Person;
+            var returnedObject = _personService.Get(personId);
 
             //Assert
-            Assert.AreEqual(200, controllerReturn.StatusCode.Value);
             Assert.IsInstanceOf<Person>(returnedObject);
             Assert.AreEqual(1, returnedObject.Id);
         }
@@ -59,14 +57,12 @@ namespace Tests
             //Arrange
             var personId = 2;
             Person person = new Person { Id = 1 };
-            _personService.Setup(p => p.Get(personId)).Returns((Person)null);
+            _personRepository.Setup(p => p.Get(personId)).Returns((Person)null);
 
             //Act
-            var controllerReturn = _personController.Get(personId).Result as ObjectResult;
-            var returnedObject = controllerReturn.Value as Person;
+            var returnedObject = _personService.Get(personId);
 
             //Assert
-            Assert.AreEqual(404, controllerReturn.StatusCode.Value);
             Assert.IsNull(returnedObject);
         }
     }
